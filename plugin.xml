@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="tranduytrung.iostream"
+    version="0.1.0">
+    <name>IO Stream</name>
+
+  <js-module src="www/file.js" name="file">
+    <clobbers target="window.iostream.file" />
+  </js-module>
+  
+  <js-module src="www/stream.js" name="stream">
+    <clobbers target="window.iostream.stream" />
+  </js-module>
+
+  <!-- windows -->
+  <platform name="windows">
+    <js-module src="src/windows/file.js" name="file.windows">
+      <merges target="" />
+    </js-module>
+    <js-module src="src/windows/stream.js" name="stream.windows">
+      <merges target="" />
+    </js-module>
+    <js-module src="src/windows/streamHandle.js" name="streamHandle.windows">
+      <merges target="" />
+    </js-module>
+    <js-module src="src/windows/utils.js" name="utils.windows">
+      <merges target="" />
+    </js-module>
+    
+    <framework src="src/windows/iostream/iostream/bin/Release/tranduytrung.iostream.winmd" custom="true"/>
+  </platform>
+
+  <!-- other platforms -->
+
+</plugin>
